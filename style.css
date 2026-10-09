@@ -1,0 +1,55 @@
+.video-preview {
+    position: relative;
+    height: 600px;    
+    overflow: hidden;
+    background: #000;
+    border-radius: 20px
+}
+
+.video-preview>img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.video-preview__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    padding: 0;
+    border: 0;
+    background: 0 0;
+    cursor: pointer;
+    transform: translate(-50%,-50%)
+}
+
+.video-preview__play svg {
+    display: block;
+    transition: transform .25s ease
+}
+
+.video-preview__play:hover svg {
+    transform: scale(1.08)
+}
+
+.video-preview iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0
+}
+
+@media (max-width: 1400px){
+    .video-preview{
+      height: 500px;  
+    }
+}
+@media (max-width: 992px){
+    .video-preview{
+      height: 400px;  
+    }
+}
